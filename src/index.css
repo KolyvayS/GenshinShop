@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  font-family: "Montserrat", serif;
+  font-weight: 300;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 50px auto;
+}
+
+header {
+  position: relative;
+}
+
+header .header-text {
+  padding: 0 15px;
+}
+
+header .logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+header .shopping-cart-icon {
+  padding-right: 10px;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header ul.nav li:nth-child(1):hover .shopping-cart-icon,
+header .shopping-cart-icon:hover,
+header .shopping-cart-icon.active {
+  color: #d63131;
+  transform: scale(1.5);
+}
+
+header .shopping-cart,
+header .shop-info,
+header .contacts {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 450px;
+  background: #fff5f5;
+  -webkit-box-shadow: 4px 5px 15px -7px #f5d0d0;
+  box-shadow: 4px 5px 15px -7px #f5d0f5;
+  z-index: 1000;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+header .shopping-cart .empty-cart p{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+header .shopping-cart .item {
+  width: 100%;
+  list-style: none;
+  float: left;
+  margin-bottom: 20px;
+}
+
+header .shopping-cart .item img {
+  height: 90px;
+  width: 70px;
+  object-fit: contain;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+  background-color: #fff;
+}
+
+header .shopping-cart .item h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding-right: 25px;
+}
+
+header .shopping-cart .item b {
+  font-weight: 600;
+  color: #9870aa;
+  min-width: 80px;
+  text-align: left;
+}
+
+header .shopping-cart .item .item-info {
+  display: flex;
+  margin-top: 20px;
+}
+
+header .shopping-cart .item .item-info span {
+  font-weight: 600;
+  text-align: center;
+  min-width: 15px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header .shopping-cart .item .item-info button {
+  background: #9870aa;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+header .shopping-cart .item .delete-icon {
+  color: #d63131;
+  float: right;
+  position: relative;
+  top: -15px;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .shopping-cart .item .delete-icon:hover {
+  color: #ee1010;
+  transform: scale(1.5);
+}
+
+header .shopping-cart .results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+header .shopping-cart .results .sum {
+  float: left;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+header .shopping-cart .results button {
+  float: right;
+  width: 60%;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #5b3170;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header .shopping-cart .results button:hover {
+  background-color: #9870aa;
+}
+
+header ul.nav {
+  float: right;
+  list-style: none;
+}
+
+header ul.nav li {
+  display: inline-block;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: color 500ms ease;
+}
+
+header ul.nav li:hover {
+  color: #a67caa;
+}
+
+header .shop-info p,
+header .contacts p {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+header .shop-info p {
+  text-align: justify;
+  margin-top: 10px;
+}
+
+header .presentation {
+  margin: 50px 0;
+  background: url('./img/background.png') no-repeat;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  background-color: #bcbcbc;
+  position: relative;
+}
+
+header .presentation::after {
+  content: 'Genshin Impact колекційні товари';
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  width: 350px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #f8d3e5;
+}
+
+header .presentation::before {
+  content: 'за низькими цінами';
+  position: absolute;
+  top: 300px;
+  left: 50px;
+  width: 350px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #f8d3e5;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+}
+
+.categories button {
+  display: inline-block;
+  background-color: #ae7dc5;
+  color: #f1e4f7;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+}
+
+.categories button:hover {
+  border-color: #5b3170;
+  transform: scale(1.03);
+}
+
+.categories .active-category {
+  background-color: #5b3170;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1c002b69;
+  z-index: 9999;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-background .item-content,
+.page-background .payment-content {
+  width: 600px;
+  position: relative;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.page-background .successful-payment {
+  position: relative;
+  padding: 50px 70px;
+  padding-left: 10px;
+  background: #fff;
+  border: 5px solid #d84141;
+  border-radius: 10px;
+}
+
+.page-background .payment-content {
+  width: 500px;
+}
+
+.payment-content label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.payment-content input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.payment-content .error {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.payment-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #5b3170;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-content button:hover {
+  background-color: #9870aa;
+}
+
+.payment-content .buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.payment-content .buttons-container button {
+  width: 48%;
+}
+
+.successful-payment p{
+  font-size: 20px;
+  font-weight: 600;
+  color: #41813f !important;
+}
+
+main .item {
+  width: 30%;
+  margin-bottom: 50px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+main .item img,
+.page-background .item-content img {
+  height: 500px;
+  object-fit: contain;
+  width: 100%;
+  border-radius: 10px 10px;
+}
+
+main .item img {
+  transition: transform 500ms ease;
+  cursor: pointer;
+}
+
+main .item img:hover {
+  transform: scale(1.05)
+}
+
+main h2, main p, main b,
+.page-background h2, .page-background p, .page-background b {
+  margin: 10px 20px;
+  color: #333;
+}
+
+main b,
+.page-background b {
+  color:#41813f;
+}
+
+main .add-to-cart,
+.page-background .add-to-cart {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  background: #f85858;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 500ms ease;
+}
+
+.page-background .add-to-cart {
+  right: 30px;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+main .add-to-cart:hover,
+.page-background .add-to-cart:hover {
+  transform: scale(1.2) translateY(-5px);
+}
+
+.page-background .close-page,
+header .close-tab {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background: #ecebeb;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+header .close-tab {
+  right: 10px;
+  top: 10px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .wrapper {
+    width: 992px;
+  }
+
+  .page-background .item-content, 
+  .page-background .payment-content {
+    width: 40%;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .wrapper {
+    width: 100%; 
+    margin: 0 auto;
+  }
+
+  header .header-text {
+    padding-top: 40px;
+  }
+
+  header .presentation {
+    height: 400px;
+    margin: 30px 0;
+  }
+
+  header .presentation::after {
+    top: 120px;
+    left: 40px;
+    font-size: 36px; 
+  }
+
+  header .presentation::before {
+    top: 250px;
+    left: 40px;
+    font-size: 16px;
+  }
+
+  main .item img {
+    height: 400px;
+  }
+
+  header .shopping-cart,
+  header .shop-info,
+  header .contacts {
+    top: auto;
+  }
+
+  .page-background .item-content,
+  .page-background .payment-content {
+    width: 40%;
+  }
+
+  .categories button { 
+    font-size: 14px; 
+  }
+
+  footer {
+    margin: 50px 0;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .wrapper {
+    width: 100%; 
+    margin: 0 auto; 
+  }
+
+  header .header-text {
+    text-align: center;
+    margin-top: 20px; 
+  }
+
+  header ul.nav {
+    padding-top: 10px;
+    float: none;
+    display: flex;
+    justify-content: space-evenly; 
+  }
+
+  header ul.nav li {
+    margin: 0;
+  }
+
+  header .shopping-cart,
+  header .shop-info,
+  header .contacts {
+    width: 100%; 
+    top: auto;
+    box-sizing: border-box; 
+  }
+
+  header .presentation {
+    height: 300px; 
+    background-size: cover;
+    margin: 15px 0;
+  }
+
+  header .presentation::after {
+    top: 100px;
+    left: 20px;
+    font-size: 25px;
+    max-height: 20px;
+  }
+
+  header .presentation::before {
+    top: 160px;
+    left: 20px;
+    font-size: 14px;
+    width: 80%; 
+  }
+
+  main {
+    justify-content: space-evenly;
+  }
+
+  main .item {
+    width: 48%; 
+    margin-bottom: 20px; 
+  }
+
+  main .item img {
+    height: 300px; 
+  }
+
+  .categories {
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    margin-bottom: 20px;
+  }
+
+  .categories button {
+    width: 45%; 
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-right: 0; 
+  }
+
+  .page-background .item-content,
+  .page-background .payment-content {
+    width: 60%; 
+    padding: 30px 20px;
+  }
+
+  .page-background .item-content img {
+    height: 300px; 
+  }
+
+  .page-background .add-to-cart {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .page-background .payment-content input {
+    padding: 10px; 
+  }
+
+  .page-background .successful-payment {
+    padding: 35px; 
+  }
+
+  footer {
+    margin: 50px 0; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+    margin: 0;
+  }
+  
+  header .header-text {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  header ul.nav {
+    padding-top: 20px;
+    float: none;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  header ul.nav li {
+    margin: 0;
+  }
+ 
+  header .shopping-cart,
+  header .shop-info,
+  header .contacts {
+    width: 100%;
+    top: auto;
+    box-sizing: border-box;
+  }
+
+  header .presentation {
+    height: 300px;
+    background-size: cover;
+    margin: 20px 0;
+  }
+
+  header .presentation::after {
+    top: 80px;
+    left: 20px;
+    font-size: 24px;
+    width: 10%;
+  }
+
+  header .presentation::before {
+    top: 200px;
+    left: 20px;
+    font-size: 14px;
+    width: 80%;
+  }
+
+  main .item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  main .item img {
+    height: 300px;
+  }
+
+  .page-background .item-content,
+  .page-background .payment-content {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .page-background .item-content img {
+    height: 400px;
+  }
+
+  .page-background .add-to-cart {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .page-background .payment-content input {
+    padding: 5px;
+  }
+
+  .page-background .successful-payment {
+    padding-right: 10px;
+  }
+
+  .categories {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .categories button {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin: 2px 5px;
+    width: 90%;
+  }
+}
+
